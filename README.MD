@@ -6,6 +6,9 @@ This project has been built to be used in the 2026 earth day event that occured 
 ## Components
 The python script features a CLI-based system to interface with the _scores.json_ file where the scores and teams are stored and an HTTP server made with _Flask_ that serves the _templates_ directory.
 
+## HTTP server
+The HTTP server lives `0.0.0.0:8080`, you can access the page via http://localhost:8080 or with the IP address of the computer running the program in your local network.
+
 ## Usage
 To use the program run the _main.py_, the HTTP server will start in a separate thread while you'll be greeted with a command line.  
 To see the available commands use _"h"_ and press enter. The output should be the following:
