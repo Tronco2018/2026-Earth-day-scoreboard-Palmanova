@@ -12,14 +12,12 @@ http_server = Server_runner()
 # Prompt
 prompt = Prompt()
 
-PORT = 8080
-
 # Threads
 threads = []
 
 # Spawn http thread
 def spawn_http_server():
-    t = threading.Thread(target=http_server.run, args=(PORT,))
+    t = threading.Thread(target=http_server.run)
     t.start()
     threads.append(t)
 
