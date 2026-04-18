@@ -8,6 +8,7 @@ The python script features a CLI-based system to interface with the _scores.json
 
 ## HTTP server
 The HTTP server lives `0.0.0.0:8080`, you can access the page via http://localhost:8080 or with the IP address of the computer running the program in your local network.
+Those can be changed in the _"conf.yml"_ file.
 
 ## Usage
 To use the program run the _main.py_, the HTTP server will start in a separate thread while you'll be greeted with a command line.  
