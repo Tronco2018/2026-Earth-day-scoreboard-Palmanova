@@ -59,3 +59,6 @@ Commands:
 [INFO]MainThread:HTTP server stopped
 [INFO]MainThread:Exiting main thread...
 ```
+## License
+-------
+MIT — Feel free to reuse and adapt. Include attribution if you redistribute.
