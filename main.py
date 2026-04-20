@@ -1,6 +1,7 @@
 import threading
 import time
 import os
+import socket
 
 from Logger import Logger
 from HttpServer import Server_runner
@@ -22,6 +23,15 @@ def spawn_http_server():
     threads.append(t)
 
 
+# Get local ip
+def get_local_ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("8.8.8.8", 80))
+    ip = s.getsockname()[0]
+    s.close()
+
+    return ip
+
 # Checksum
 start_http_server = True
 def checksum():
@@ -33,6 +43,8 @@ def checksum():
         Logger.warn('"Templates" not found, HTTP server wont start')
         global start_http_server
         start_http_server = False
+    
+    Logger.info(f"Local ip is => {get_local_ip()}")
 
     Logger.info("Checksum finished")
 
